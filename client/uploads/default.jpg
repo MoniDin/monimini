@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Application Successful</h1>
+        <p>1)Please send the ethereum to the ewallet address provided:<b>Ewallet address</b>
+            2)Please fill out the form with your ethereum public ewallet  address, 
+            bank account details, and blockchain transactions hash number and submit to confirm the loan.
+        </p>
+        <form>
+            <label>Bank account details: <input type="text" ></input></label>
+        </form>
+        <p>
+            3) a sum of K'XXX' will be deposited into youur account you will be notified within the hour when the amount has reached your bank account
+            4) repayment should be done through deposits to this number +675 71134785 at your local digicel cellmoni kiosk for your convinience.
+        </p>
+    </body>
+</html>

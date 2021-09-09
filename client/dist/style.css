@@ -1,0 +1,33 @@
+body {
+background-color: aqua;
+}
+
+.header {
+    background-image: url('./2.jpg');
+	background-size: cover;
+	background-position: center;
+    position: relative;
+    height: auto;
+}
+
+.overlay {
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 1;
+}
+
+#description{
+	margin-top: 5%;
+	color:blanchedalmond;
+}
+
+a.nav-link {
+	margin-left: 80%;
+	color:blanchedalmond;
+	justify-self: flex-end;
+}
+
