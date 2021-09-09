@@ -5,7 +5,7 @@
   "main": "index.js",
   "proxy": "http://localhost:8000",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm install --dev && npm run start && cd .. && npm run start",
+    "heroku-postbuild": "cd client && npm install && npm install --dev && npm run start",
     "start": "node index.js",
     "test": "echo \"No test specified\" && exit 0"
   },
