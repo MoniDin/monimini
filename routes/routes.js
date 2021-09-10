@@ -4,7 +4,7 @@ const { Router } = require('express')
 const uuidv4 = require('uuid/v4')
 //upload email attachment
 const multer = require('multer')
-const dotenv = require("dotenv").config()
+
 const path = require('path')
 const nodemailer = require('nodemailer');
 const router = Router()
