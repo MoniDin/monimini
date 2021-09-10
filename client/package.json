@@ -5,7 +5,7 @@
   "main": "index.js",
   "proxy": "http://localhost:8000",
   "scripts": {
-    "build": "webpack serve --config ./webpack.config.js --mode production",
+    "start": "webpack serve --config ./webpack.config.js --mode production",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
