@@ -6,7 +6,7 @@
   "proxy": "http://localhost:8000",
   "scripts": {
     "start": "node index.js",
-    "build": "cd client && npm install && npm install --dev && npm run start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client",
     "test": "echo \"No test specified\" && exit 0"
   },
   "engines": {
