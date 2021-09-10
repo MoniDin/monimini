@@ -11,4 +11,4 @@ app.use(cookieParser());
  
 app.use(routes);
 
-app.listen(PORT, () => console.log("running on port " + PORT));
+app.listen(PORT, () => console.log("running on http://localhost:" + PORT));

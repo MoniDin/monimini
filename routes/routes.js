@@ -99,5 +99,9 @@ if(cookie !== null || undefined){
 
 })
 
+router.get('*',  async function(req, res) {
+res.send('hello from server')
+})
+
 module.exports = router
 
