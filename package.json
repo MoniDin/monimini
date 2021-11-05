@@ -10,20 +10,19 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "engines": {
-    "node":"14.15.4"
+    "node": "14.15.4"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  
   "dependencies": {
-    "nodemailer": "^6.6.3",
-    "express":"4.17.1",
-    "cookie-parser":"1.4.5",
-    "uuid":"8.3.2",
-    "dotenv":"10.0.0",
-    "multer":"1.4.2",
-    "cors":"2.8.5",
-    "path":"0.12.7"
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "4.17.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.5",
+    "path": "0.12.7",
+    "uuid": "8.3.2"
   }
 }
