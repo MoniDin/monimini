@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "npm install --dev && npm run start",
     "test": "echo \"No test specified\" && exit 0"
   },
   "engines": {
