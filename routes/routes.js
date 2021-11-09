@@ -8,10 +8,10 @@ const multer = require('multer')
 const path = require('path')
 const nodemailer = require('nodemailer');
 const router = Router()
-const cors = require('cors')
-const corsOptions	=	{		
-    origin:	'http://localhost:8008'
-}
+//const cors = require('cors')
+//const corsOptions	=	{		
+//    origin:	'http://localhost:8008'
+//}
 
 //declare count variable
 let count = 0
@@ -24,22 +24,22 @@ const storage = multer.diskStorage({
           },
     filename: async function(req,file,cb){
         count += 1
-        //console.log('count:' + count)
+        ////console.log('count:' + count)
         let fname
         let extn = file.originalname.lastIndexOf('.')
         ext = file.originalname.slice(extn,)
-        console.log(ext)
-        console.log(typeof(ext))
+        //console.log(ext)
+        //console.log(typeof(ext))
         if(ext === '.jpg' && '.jpeg'){
         let picname = 'customer' + count + ext
         piclink = picname
         fname = picname
     }else{
-        console.log('invalid picture format')
+        //console.log('invalid picture format')
         fname = 'default.jpg'
         piclink = 'default.jpg'
     }
-    console.log(fname)
+    //console.log(fname)
         cb(null, fname )
           }
 })
@@ -47,22 +47,20 @@ const upload = multer({storage:storage})
 
 
 //home page
-router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname,'..','build','index.html'))
-})
 
-router.post('/api', cors(corsOptions), upload.single('item_pic'), function(req, res) {
+
+router.post('/api', upload.single('item_pic'), function(req, res) {
     // declare random cookie id
     let cid = uuidv4()
     let { fullname,email,employer,
         office_loc,itemcomments,loan,
         loandate,packageplan,referrer } = req.body
-console.log('piclink : ' + piclink)
+//console.log('piclink : ' + piclink)
 let cookie = req.cookies.who
-console.log(cookie)
-console.log(path.join(__dirname ,'..', 'uploads'  ))
+//console.log(cookie)
+//console.log(path.join(__dirname ,'..', 'uploads'  ))
 if(cookie == null || undefined){
-    console.log(req.body)
+    //console.log(req.body)
     var mailTransport = nodemailer.createTransport({        
         service: 'Gmail',        
         auth: {                
@@ -103,9 +101,9 @@ if(cookie == null || undefined){
 
 })
 
-router.get('*', function(req, res) {
-res.redirect('/')
-})
+router.get('*',function(req, res){
+    res.sendFile(path.join(__dirname , 'build','index.html'))
+  })
 
 module.exports = router
 
