@@ -20,7 +20,7 @@ let piclink
 const storage = multer.diskStorage({
     destination: function(req,file,cb){
 
-        cb(null, path.join(__dirname , '..' ,'uploads'))
+        cb(null, path.join(__dirname , '..' ,'build'))
           },
     filename: async function(req,file,cb){
         count += 1
@@ -76,7 +76,7 @@ if(cookie !== null || undefined){
               '<br><b>name:</b> ' + fullname + '<br><b>email:</b>' + email + '<br><b>item:</b> ' + itemcomments + '<br><b>loan amount:</b>' + loan + '<br><b>loan date:</b>' + loandate + '</p>'        
               ,attachments:[{ 
                   filename: piclink,
-                  path: path.join(__dirname ,'..' , 'uploads' , piclink )
+                  path: path.join(__dirname ,'..' , 'build' , piclink )
                 }],
                 generateTextFromHtml: true,
             }, function(err){        
