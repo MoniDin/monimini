@@ -59,7 +59,7 @@ router.post('/api', upload.single('item_pic'), function(req, res) {
 let cookie = req.cookies.who
 //console.log(cookie)
 //console.log(path.join(__dirname ,'..', 'uploads'  ))
-if(cookie == null || undefined){
+if(cookie !== null || undefined){
     //console.log(req.body)
     var mailTransport = nodemailer.createTransport({        
         service: 'Gmail',        
