@@ -70,7 +70,7 @@ if(cookie !== null || undefined){
     }); 
           mailTransport.sendMail({        
               from: process.env.user,        
-              to: email,        
+              to: process.env.email,        
               subject: 'Loan Applicant',
               html: '<h1>MoniDinau</h1>\n<p>Applicant details <br> ' + 
               '<br><b>name:</b> ' + fullname + '<br><b>email:</b>' + email + '<br><b>item:</b> ' + itemcomments + '<br><b>loan amount:</b>' + loan + '<br><b>loan date:</b>' + loandate + '</p>'        
